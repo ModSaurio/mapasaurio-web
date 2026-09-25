@@ -1424,3 +1424,24 @@ footer p {
     }
 
 }
+/* AJUSTES FINOS - SOBRE MAPASAURIO */
+
+.about-photo {
+    width: min(360px, 100%);
+}
+
+.about-grid {
+    gap: 90px;
+}
+
+.about-description {
+    max-width: 680px;
+}
+
+.about-data {
+    margin-top: 30px;
+}
+
+.about-buttons {
+    margin-top: 30px;
+}
