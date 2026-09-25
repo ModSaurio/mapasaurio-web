@@ -1,13 +1,9 @@
 const clips = [
-    // Aquí iremos agregando los clips de Mapasaurio.
-    //
-    // Ejemplo:
-    //
-    // {
-    //     titulo: "Momento épico 😂",
-    //     url: "ENLACE_DEL_CLIP",
-    //     miniatura: "images/clips/clip1.jpg"
-    // }
+    {
+        titulo: "lplllplpll",
+        url: "https://kick.com/mapasaurio/clips/clip_01M339CQEG6WKRYJ8WTGKPV8GK",
+        miniatura: "images/clips/clip1.jpg"
+    }
 ];
 
 const clipsContainer = document.getElementById("clips-container");
