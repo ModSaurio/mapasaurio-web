@@ -936,3 +936,15 @@ footer p {
     }
 
 }
+.hero-role a {
+    color: var(--rosa);
+    text-decoration: none;
+    font-weight: 900;
+
+    transition: .2s;
+}
+
+.hero-role a:hover {
+    color: var(--rosa-claro);
+    text-decoration: underline;
+}
