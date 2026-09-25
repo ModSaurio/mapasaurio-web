@@ -1,0 +1,239 @@
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.social-section {
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(245, 31, 120, .10),
+            transparent 35%
+        ),
+        #101012;
+}
+
+.social-header {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.social-header h2 {
+    margin-bottom: 15px;
+}
+
+.social-header p {
+    color: var(--gris);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* GRID REDES */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.social-card {
+    min-height: 115px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    position: relative;
+
+    background: #18181b;
+
+    border: 1px solid #29292d;
+    border-bottom: 3px solid var(--rosa);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    color: white;
+
+    transition:
+        transform .2s,
+        border-color .2s,
+        background .2s;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--rosa);
+    background: #202024;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--rosa);
+
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.social-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.social-card p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.arrow {
+    position: absolute;
+
+    right: 17px;
+    top: 15px;
+
+    color: var(--rosa);
+
+    font-size: 19px;
+}
+
+
+/* WHATSAPP + AMAZON */
+
+.community-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+.community-card {
+    min-height: 190px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-decoration: none;
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #19191c 60%,
+            rgba(245,31,120,.18)
+        );
+
+    border: 1px solid #29292d;
+    border-radius: 8px;
+
+    transition: .2s;
+}
+
+.community-card:hover {
+    border-color: var(--rosa);
+    transform: translateY(-4px);
+}
+
+.community-label {
+    color: var(--rosa);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.community-card h3 {
+    margin-top: 12px;
+
+    font-size: 25px;
+}
+
+.community-card p {
+    margin-top: 10px;
+
+    color: var(--gris);
+
+    line-height: 1.5;
+}
+
+.community-button {
+    margin-top: 25px;
+
+    color: var(--rosa);
+
+    font-weight: 900;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 35px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 2px solid var(--rosa);
+
+    background: #09090a;
+}
+
+.footer-logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--rosa);
+}
+
+footer p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE REDES */
+
+@media (max-width: 1000px) {
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .social-grid,
+    .community-links {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+
+        text-align: center;
+    }
+
+}
