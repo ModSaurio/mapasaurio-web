@@ -1,3 +1,310 @@
+:root {
+    --rosa: #f51f78;
+    --rosa-claro: #ff3b8d;
+    --negro: #0d0d0f;
+    --panel: #171719;
+    --panel-claro: #202023;
+    --blanco: #ffffff;
+    --gris: #a7a7ad;
+    --borde: #29292d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   MENÚ SUPERIOR
+========================= */
+
+header {
+    height: 76px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(13, 13, 15, .96);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 2px solid var(--rosa);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--rosa);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+nav a:hover {
+    color: var(--rosa);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(245, 31, 120, .25),
+            transparent 32%
+        ),
+        #0d0d0f;
+}
+
+/* Bloque diagonal rosa */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 700px;
+
+    right: -240px;
+    top: -190px;
+
+    background: var(--rosa);
+
+    transform: rotate(32deg);
+
+    opacity: .13;
+}
+
+/* Puntitos decorativos */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: 15%;
+    bottom: 12%;
+
+    opacity: .18;
+
+    background-image:
+        radial-gradient(
+            var(--rosa) 3px,
+            transparent 3px
+        );
+
+    background-size: 22px 22px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+.tag {
+    color: var(--rosa);
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+
+    line-height: .9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: var(--rosa);
+}
+
+.hero p {
+    margin-top: 28px;
+
+    max-width: 620px;
+
+    color: var(--gris);
+
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.buttons {
+    margin-top: 36px;
+
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 27px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--rosa);
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow:
+        0 8px 30px rgba(245, 31, 120, .3);
+}
+
+.btn-secondary {
+    color: white;
+
+    border: 2px solid var(--rosa);
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    font-weight: 900;
+}
+
+.section h2 span {
+    color: var(--rosa);
+}
+
+
+/* =========================
+   CLIPS
+========================= */
+
+#clips {
+    background: #111113;
+}
+
+.clips {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.clip {
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background: var(--panel);
+
+    border: 1px solid var(--borde);
+    border-bottom: 4px solid var(--rosa);
+
+    border-radius: 8px;
+
+    color: var(--gris);
+
+    transition: .2s;
+}
+
+.clip:hover {
+    transform: translateY(-5px);
+    border-color: var(--rosa);
+}
+
+
 /* =========================
    REDES SOCIALES
 ========================= */
@@ -5,15 +312,16 @@
 .social-section {
     background:
         radial-gradient(
-            circle at 20% 50%,
-            rgba(245, 31, 120, .10),
-            transparent 35%
+            circle at 15% 50%,
+            rgba(245, 31, 120, .11),
+            transparent 30%
         ),
-        #101012;
+        #0d0d0f;
 }
 
 .social-header {
     max-width: 700px;
+
     margin-bottom: 45px;
 }
 
@@ -23,16 +331,18 @@
 
 .social-header p {
     color: var(--gris);
+
     font-size: 18px;
+
     line-height: 1.6;
 }
 
-
-/* GRID REDES */
-
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 16px;
 }
 
@@ -43,13 +353,14 @@
 
     display: flex;
     align-items: center;
+
     gap: 16px;
 
     position: relative;
 
-    background: #18181b;
+    background: var(--panel);
 
-    border: 1px solid #29292d;
+    border: 1px solid var(--borde);
     border-bottom: 3px solid var(--rosa);
 
     border-radius: 8px;
@@ -65,8 +376,10 @@
 
 .social-card:hover {
     transform: translateY(-5px);
+
     border-color: var(--rosa);
-    background: #202024;
+
+    background: var(--panel-claro);
 }
 
 .social-icon {
@@ -83,25 +396,27 @@
 
     background: var(--rosa);
 
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 900;
 }
 
 .social-card h3 {
-    font-size: 18px;
     margin-bottom: 5px;
+
+    font-size: 18px;
 }
 
 .social-card p {
     color: var(--gris);
-    font-size: 14px;
+
+    font-size: 13px;
 }
 
 .arrow {
     position: absolute;
 
-    right: 17px;
-    top: 15px;
+    right: 15px;
+    top: 13px;
 
     color: var(--rosa);
 
@@ -109,19 +424,23 @@
 }
 
 
-/* WHATSAPP + AMAZON */
+/* =========================
+   WHATSAPP + AMAZON
+========================= */
 
 .community-links {
+    margin-top: 35px;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 20px;
-
-    margin-top: 35px;
 }
 
 .community-card {
-    min-height: 190px;
+    min-height: 200px;
 
     padding: 30px;
 
@@ -135,25 +454,29 @@
     background:
         linear-gradient(
             135deg,
-            #19191c 60%,
-            rgba(245,31,120,.18)
+            #19191c 55%,
+            rgba(245, 31, 120, .18)
         );
 
-    border: 1px solid #29292d;
+    border: 1px solid var(--borde);
+
     border-radius: 8px;
 
-    transition: .2s;
+    transition:
+        transform .2s,
+        border-color .2s;
 }
 
 .community-card:hover {
-    border-color: var(--rosa);
     transform: translateY(-4px);
+
+    border-color: var(--rosa);
 }
 
 .community-label {
     color: var(--rosa);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
 
     letter-spacing: 2px;
@@ -178,11 +501,35 @@
 
     color: var(--rosa);
 
+    font-size: 13px;
     font-weight: 900;
+
+    letter-spacing: 1px;
 }
 
 
-/* FOOTER */
+/* =========================
+   SOBRE MAPASAURIO
+========================= */
+
+#sobre-mi {
+    background: #111113;
+}
+
+.about-text {
+    max-width: 700px;
+
+    color: var(--gris);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 35px 8%;
@@ -191,14 +538,15 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    border-top: 2px solid var(--rosa);
-
     background: #09090a;
+
+    border-top: 2px solid var(--rosa);
 }
 
 .footer-logo {
     font-size: 21px;
     font-weight: 900;
+
     letter-spacing: 2px;
 }
 
@@ -208,29 +556,95 @@ footer {
 
 footer p {
     color: var(--gris);
+
     font-size: 13px;
 }
 
 
-/* RESPONSIVE REDES */
+/* =========================
+   TABLETS
+========================= */
 
 @media (max-width: 1000px) {
 
     .social-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
 
-@media (max-width: 650px) {
 
-    .social-grid,
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 750px) {
+
+    header {
+        height: 68px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: calc(100vh - 68px);
+
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 70px 25px;
+    }
+
+    .clips {
+        grid-template-columns: 1fr;
+    }
+
     .community-links {
         grid-template-columns: 1fr;
     }
 
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 520px) {
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
     footer {
         flex-direction: column;
+
         gap: 12px;
 
         text-align: center;
