@@ -1195,3 +1195,232 @@ footer p {
     box-shadow:
         0 10px 30px rgba(245, 31, 120, .25);
 }
+/* ========================================
+   SOBRE MAPASAURIO
+======================================== */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(245, 31, 120, .13),
+            transparent 30%
+        ),
+        #111113;
+}
+
+.about-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 600px;
+
+    right: -250px;
+    top: -150px;
+
+    background: var(--rosa);
+
+    opacity: .08;
+
+    transform: rotate(30deg);
+}
+
+.about-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, .8fr)
+        minmax(0, 1.2fr);
+
+    gap: 80px;
+
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* FOTO */
+
+.about-photo {
+    width: min(380px, 100%);
+
+    position: relative;
+}
+
+.about-photo img {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 2;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .45);
+}
+
+.about-photo-border {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: -15px;
+    top: 15px;
+
+    border: 3px solid var(--rosa);
+    border-radius: 8px;
+
+    z-index: 1;
+}
+
+.about-photo-tag {
+    position: absolute;
+
+    right: -20px;
+    bottom: 25px;
+
+    z-index: 3;
+
+    padding: 12px 18px;
+
+    background: var(--rosa);
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* INFORMACIÓN */
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-intro {
+    max-width: 650px;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.about-description {
+    max-width: 650px;
+
+    color: var(--gris);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* DATOS */
+
+.about-data {
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.about-data-item {
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, .025);
+
+    border: 1px solid var(--borde);
+    border-left: 3px solid var(--rosa);
+
+    border-radius: 5px;
+}
+
+.about-data-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--rosa);
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.about-data-item strong {
+    font-size: 15px;
+}
+
+
+/* BOTONES */
+
+.about-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-photo {
+        margin: auto;
+
+        width: min(350px, 85%);
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .about-data {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo-tag {
+        right: -10px;
+    }
+
+}
