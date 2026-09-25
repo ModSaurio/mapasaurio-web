@@ -1159,3 +1159,39 @@ footer p {
 
     text-transform: uppercase;
 }
+/* BOTÓN VER MÁS CLIPS */
+
+.clips-more {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.btn-clips-more {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    color: var(--rosa);
+    background: transparent;
+
+    border: 1px solid var(--rosa);
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    transition: .2s;
+}
+
+.btn-clips-more:hover {
+    color: white;
+    background: var(--rosa);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(245, 31, 120, .25);
+}
